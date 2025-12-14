@@ -1,4 +1,21 @@
-node_modules/
-*.log
-.DS_Store
-.env
+# Ignore everything by default
+*
+
+# Explicitly include essential files
+!.gitignore
+
+# Documentation
+!README
+!LICENSE
+!VERSION
+
+# Source code
+!*.js
+
+# Package management
+!package.json
+
+# Tests directory and contents
+!tests/
+!tests/**/*.js
+!tests/reports/

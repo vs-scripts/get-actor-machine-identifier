@@ -1,14 +1,15 @@
 {
   "name": "get-actor-machine-identifier",
-  "version": "1.0.0",
-  "description": "Cross-platform library to generate unique actor machine identifiers",
+  "version": "0.0.0",
+  "description": "Cross-platform library to generate unique actor machine identifiers. Dual-licensed under AGPL-3.0-or-later (for open source use) and a commercial license.",
   "type": "module",
   "main": "get-actor-machine-identifier.js",
   "exports": {
     ".": "./get-actor-machine-identifier.js"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "24.12.0",
+    "npm": "10.5.0"
   },
   "keywords": [
     "machine-id",
@@ -19,18 +20,20 @@
     "browser",
     "nodejs"
   ],
-  "author": "",
-  "license": "MIT",
+  "author": "Richeve Bebedor <richeve.bebedor+vs-scripts@gmail.com> (https://vs.github.io)",
+  "license": "(AGPL-3.0-or-later OR Commercial)",
+  "licenseText": "See LICENSE for full license information",
+  "private": false,
   "scripts": {
     "test": "if not exist tests\reports mkdir tests\reports && tape tests/**/*.test.js > tests/reports/test-results.tap && type tests/reports/test-results.tap | tap-spec"
   },
   "devDependencies": {
-    "jsdom": "^22.1.0",
-    "mock-require": "^3.0.3",
-    "nyc": "^17.1.0",
-    "tap-mocha-reporter": "^5.0.4",
-    "tap-spec": "^5.0.0",
-    "tape": "^5.9.0"
+    "jsdom": "24.0.0",
+    "mock-require": "3.0.3",
+    "nyc": "17.1.0",
+    "tap-mocha-reporter": "5.0.4",
+    "tap-spec": "5.0.1",
+    "tape": "5.6.6"
   },
   "nyc": {
     "extension": [

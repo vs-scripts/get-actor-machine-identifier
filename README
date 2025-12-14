@@ -1,0 +1,43 @@
+get-actor-machine-identifier
+====================
+
+A cross-platform JavaScript library for generating unique machine identifiers.
+
+## Installation
+
+```bash
+npm install get-actor-machine-identifier
+```
+
+## Usage
+
+### Node.js
+
+```javascript
+import { getActorMachineIdentifier } from 'get-actor-machine-identifier';
+const identifier = await getActorMachineIdentifier();
+```
+
+### Browser
+
+```javascript
+import { getActorMachineIdentifier } from './get-actor-machine-identifier.js';
+const identifier = await getActorMachineIdentifier();
+```
+
+## Output Format
+
+3-6-9 base36 format: `xxx-xxxxxx-xxxxxxxxx`
+- First 3 chars: Random component
+- Next 6 chars: Machine-based component
+- Last 9 chars: GUID-based component
+
+## Requirements
+
+- Node.js 18+ or modern browser with Web Crypto API
+- ESM modules only
+
+## License
+
+MIT
+
