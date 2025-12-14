@@ -1,0 +1,63 @@
+{
+  "name": "get-actor-machine-identifier",
+  "version": "1.0.0",
+  "description": "Cross-platform library to generate unique actor machine identifiers",
+  "type": "module",
+  "main": "get-actor-machine-identifier.js",
+  "exports": {
+    ".": "./get-actor-machine-identifier.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "machine-id",
+    "identifier",
+    "actor",
+    "unique-id",
+    "cross-platform",
+    "browser",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "test": "if not exist tests\reports mkdir tests\reports && tape tests/**/*.test.js > tests/reports/test-results.tap && type tests/reports/test-results.tap | tap-spec"
+  },
+  "devDependencies": {
+    "jsdom": "^22.1.0",
+    "mock-require": "^3.0.3",
+    "nyc": "^17.1.0",
+    "tap-mocha-reporter": "^5.0.4",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.9.0"
+  },
+  "nyc": {
+    "extension": [
+      ".js"
+    ],
+    "include": [
+      "**/*.js"
+    ],
+    "exclude": [
+      "**/node_modules/**",
+      "**/tests/**",
+      "**/coverage/**"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "all": true,
+    "check-coverage": true,
+    "lines": 80,
+    "statements": 80,
+    "functions": 80,
+    "branches": 80
+  },
+  "tap": {
+    "check-coverage": true,
+    "coverage": true,
+    "reporter": "tap-spec"
+  }
+}
