@@ -1,5 +1,6 @@
 # Ignore everything by default
 *
+*/**
 
 # Explicitly include essential files
 !.gitignore
@@ -19,3 +20,8 @@
 !tests/
 !tests/**/*.js
 !tests/reports/
+
+# Test helper scripts (kept in repo)
+!tests/scripts/
+!tests/scripts/**/*.ps1
+!tests/scripts/**/*.sh
