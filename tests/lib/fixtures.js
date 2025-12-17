@@ -1,5 +1,5 @@
 // Test data for hash computation
-const TEST_STRINGS = {
+export const TEST_STRINGS = {
   EMPTY: '',
   SIMPLE: 'test',
   SPECIAL_CHARS: 'test!@#$%^&*()_+{}|:"<>?',
@@ -8,7 +8,7 @@ const TEST_STRINGS = {
 };
 
 // Expected results for known inputs
-const EXPECTED_RESULTS = {
+export const EXPECTED_RESULTS = {
   SHA256_EMPTY: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
   SHA256_TEST: '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08',
   BASE36_0: '0',
@@ -20,7 +20,7 @@ const EXPECTED_RESULTS = {
 };
 
 // Platform-specific test data
-const PLATFORM_DATA = {
+export const PLATFORM_DATA = {
   WINDOWS: {
     REGISTRY_OUTPUT: '    MachineGuid    REG_SZ    {12345678-1234-5678-9012-345678901234}',
     EXPECTED_ID: '12345678-1234-5678-9012-345678901234'
@@ -33,10 +33,4 @@ const PLATFORM_DATA = {
     IOREG_OUTPUT: '    "IOPlatformUUID" = "12345678-1234-5678-9012-345678901234"',
     EXPECTED_UUID: '12345678-1234-5678-9012-345678901234'
   }
-};
-
-module.exports = {
-  TEST_STRINGS,
-  EXPECTED_RESULTS,
-  PLATFORM_DATA
 };

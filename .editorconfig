@@ -15,5 +15,5 @@ trim_trailing_whitespace = false
 [LICENSE]
 trim_trailing_whitespace = false
 
-[VERSION]
+[VERSION,ORIGIN]
 insert_final_newline = false

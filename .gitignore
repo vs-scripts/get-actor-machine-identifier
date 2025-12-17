@@ -1,23 +1,37 @@
-# Ignore everything by default
+# This gitignore file uses reverse ignore logic.
+# Ensure that this is strictly followed.
+# Whitelist files and directories you want to track.
+
 *
 */**
 
 .*
 .*/**
 
-!.gitignore
 !.editorconfig
+!.gitattributes
+!.gitignore
 !.prettierignore
-!.vscode/
 
-
-!README
 !LICENSE
+!ORIGIN
+!README
 !VERSION
 
 !package.json
 
 !*.js
+
+!.husky/
+!.husky/commit-msg
+!.husky/pre-commit
+!.husky/pre-push
+
+!.vscode/
+!.vscode/**/*.json
+
+!scripts/
+!scripts/**/*.js
 
 !tests/
 !tests/e2e/

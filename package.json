@@ -21,18 +21,18 @@
     "nodejs"
   ],
   "author": "Richeve Bebedor <richeve.bebedor+vs-scripts@gmail.com> (https://vs.github.io/scripts)",
-  "license": "AGPL-3.0-or-later OR Commercial",
-  "licenseText": "See LICENSE file for full license information",
+  "license": "See LICENSE file for full license information",
   "private": false,
   "scripts": {
-    "test": "if not exist tests\reports mkdir tests\reports && tape tests/**/*.test.js > tests/reports/test-results.tap && type tests/reports/test-results.tap | tap-spec"
+    "test": "if not exist tests\reports mkdir tests\reports && tape tests/**/*.test.js > tests/reports/test-results.tap && type tests/reports/test-results.tap | tap-spec",
+    "prepare": "husky"
   },
   "devDependencies": {
     "jsdom": "24.0.0",
     "mock-require": "3.0.3",
     "nyc": "17.1.0",
     "tap-mocha-reporter": "5.0.4",
-    "tap-spec": "5.0.1",
+    "tap-spec": "5.0.0",
     "tape": "5.6.6"
   },
   "nyc": {
