@@ -1,6 +1,6 @@
 import test from 'tape';
-import { generateBrowserFingerprint } from '../get-actor-machine-identifier.js';
-import { browserMocks } from './mocks.js';
+import { generateBrowserFingerprint } from '../../get-actor-machine-identifier.js';
+import { browserMocks } from '../lib/mocks.js';
 
 // Save original globals
 const originalWindow = global.window;

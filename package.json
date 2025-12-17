@@ -20,9 +20,9 @@
     "browser",
     "nodejs"
   ],
-  "author": "Richeve Bebedor <richeve.bebedor+vs-scripts@gmail.com> (https://vs.github.io)",
-  "license": "(AGPL-3.0-or-later OR Commercial)",
-  "licenseText": "See LICENSE for full license information",
+  "author": "Richeve Bebedor <richeve.bebedor+vs-scripts@gmail.com> (https://vs.github.io/scripts)",
+  "license": "AGPL-3.0-or-later OR Commercial",
+  "licenseText": "See LICENSE file for full license information",
   "private": false,
   "scripts": {
     "test": "if not exist tests\reports mkdir tests\reports && tape tests/**/*.test.js > tests/reports/test-results.tap && type tests/reports/test-results.tap | tap-spec"

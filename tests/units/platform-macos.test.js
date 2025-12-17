@@ -1,30 +1,28 @@
 import test from 'tape';
-import { getWindowsMachineGUIDFromRegistry } from '../get-actor-machine-identifier.js';
-import { PLATFORM_DATA } from './fixtures.js';
-import { childProcessMock } from './mocks.js';
+import { getMacOSPlatformUUID } from '../../get-actor-machine-identifier.js';
+import { PLATFORM_DATA } from '../lib/fixtures.js';
+import { childProcessMock } from '../mocks.js';
 
 // Mock child_process module
 const mockRequire = (await import('mock-require')).default;
-
-// Mock the child_process module
 mockRequire('child_process', childProcessMock);
 
-test('getWindowsMachineGUIDFromRegistry should return a valid GUID', async (t) => {
+test('getMacOSPlatformUUID should return a valid UUID', async (t) => {
   t.plan(2);
   
   try {
-    const guid = await getWindowsMachineGUIDFromRegistry();
+    const uuid = await getMacOSPlatformUUID();
     
     t.equal(
-      typeof guid,
+      typeof uuid,
       'string',
       'should return a string'
     );
     
     t.match(
-      guid,
-      /^\{[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\}$/i,
-      'should return a valid GUID format'
+      uuid,
+      /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i,
+      'should return a valid UUID format'
     );
   } catch (err) {
     t.fail(`Unexpected error: ${err.message}`);
@@ -34,7 +32,7 @@ test('getWindowsMachineGUIDFromRegistry should return a valid GUID', async (t) =
   }
 });
 
-test('getWindowsMachineGUIDFromRegistry should handle command failure', async (t) => {
+test('getMacOSPlatformUUID should handle command failure', async (t) => {
   t.plan(1);
   
   // Mock execSync to throw an error
@@ -44,11 +42,11 @@ test('getWindowsMachineGUIDFromRegistry should handle command failure', async (t
   };
   
   try {
-    const guid = await getWindowsMachineGUIDFromRegistry();
+    const uuid = await getMacOSPlatformUUID();
     t.equal(
-      guid,
-      '',
-      'should return empty string on command failure'
+      uuid,
+      undefined,
+      'should return undefined on command failure'
     );
   } catch (err) {
     t.fail(`Unexpected error: ${err.message}`);

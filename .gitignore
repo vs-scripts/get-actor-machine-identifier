@@ -2,26 +2,26 @@
 *
 */**
 
-# Explicitly include essential files
-!.gitignore
+.*
+.*/**
 
-# Documentation
+!.gitignore
+!.editorconfig
+
 !README
 !LICENSE
 !VERSION
 
-# Source code
-!*.js
-
-# Package management
 !package.json
 
-# Tests directory and contents
-!tests/
-!tests/**/*.js
-!tests/reports/
+!*.js
 
-# Test helper scripts (kept in repo)
+!tests/
+!tests/e2e/
+!tests/lib/
+!tests/reports/
+!tests/units/
 !tests/scripts/
-!tests/scripts/**/*.ps1
-!tests/scripts/**/*.sh
+!tests/**/*.js
+!tests/**/*.ps1
+!tests/**/*.sh

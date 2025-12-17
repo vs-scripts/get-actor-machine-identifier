@@ -1,6 +1,6 @@
 import test from 'tape';
-import { getLinuxMachineIDFromFile } from '../get-actor-machine-identifier.js';
-import { fsMock } from './mocks.js';
+import { getLinuxMachineIDFromFile } from '../../get-actor-machine-identifier.js';
+import { fsMock } from '../lib/mocks.js';
 
 // Mock fs module
 const mockRequire = (await import('mock-require')).default;

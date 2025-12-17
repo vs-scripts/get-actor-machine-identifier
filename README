@@ -1,43 +1,154 @@
-get-actor-machine-identifier
-====================
 
-A cross-platform JavaScript library for generating unique machine identifiers.
+                   get-actor-machine-identifier
 
-## Installation
+Abstract
 
-```bash
-npm install get-actor-machine-identifier
-```
+   get-actor-machine-identifier is a cross-platform JavaScript library
+   for generating unique actor machine identifiers.  The software is
+   dual-licensed under AGPL-3.0-or-later (for open source use) and a
+   commercial license.
 
-## Usage
+Copyright Notice
 
-### Node.js
+   Copyright (c) 2025 Richeve Bebedor.  All rights reserved.
 
-```javascript
-import { getActorMachineIdentifier } from 'get-actor-machine-identifier';
-const identifier = await getActorMachineIdentifier();
-```
 
-### Browser
+Table of Contents
 
-```javascript
-import { getActorMachineIdentifier } from './get-actor-machine-identifier.js';
-const identifier = await getActorMachineIdentifier();
-```
+   1.  Introduction
+   2.  Installation
+   3.  Usage
+   4.  Output Format
+   5.  How It Works
+   6.  Requirements
+   7.  Testing
+   8.  Security Considerations
+   9.  License
+   10. Author
+   11. Version
 
-## Output Format
+1.  Introduction
 
-3-6-9 base36 format: `xxx-xxxxxx-xxxxxxxxx`
-- First 3 chars: Random component
-- Next 6 chars: Machine-based component
-- Last 9 chars: GUID-based component
+   This document describes the get-actor-machine-identifier library and
+   its usage in Node.js and in modern browsers.
 
-## Requirements
+2.  Installation
 
-- Node.js 18+ or modern browser with Web Crypto API
-- ESM modules only
+   npm install get-actor-machine-identifier
 
-## License
+3.  Usage
 
-MIT
+   3.1.  Node.js
 
+      import { generateActorMachineIdentifier } from 
+         'get-actor-machine-identifier';
+
+      const identifier = await generateActorMachineIdentifier();
+
+   3.2.  Browser
+
+      import { generateActorMachineIdentifier } from
+         './get-actor-machine-identifier.js';
+
+      const identifier = await generateActorMachineIdentifier();
+
+4.  Output Format
+
+   The library generates an identifier in a 3-6-9 base36 format:
+
+   xxx-xxxxxx-xxxxxxxxx
+
+   The identifier consists of three segments:
+
+   o  3 characters: Random component
+   o  6 characters: Machine-based component (derived from a platform-
+      specific machine identifier)
+   o  9 characters: GUID-based component (derived from a generated UUID)
+
+   The segments are randomly shuffled, so the order may vary between
+   calls.  The format is intended to ensure uniqueness while maintaining
+   privacy.
+
+5.  How It Works
+
+   The library uses platform-specific methods to obtain a machine input:
+
+   o  Windows: Reads MachineGuid from the Windows Registry at
+      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography
+
+   o  Linux: Reads machine ID from /etc/machine-id
+
+   o  macOS: Retrieves platform UUID using the ioreg command
+
+   o  Browser: Generates a fingerprint based on navigator properties,
+      screen dimensions, language, and timezone
+
+   The machine input is hashed using SHA-256 and converted to base36.
+   A random component and a UUID-based component are added, and the
+   three segments are shuffled.
+
+6.  Requirements
+
+   o  Node.js: 24.12.0
+   o  npm: 10.5.0
+   o  Browser: Modern browser with Web Crypto API support
+   o  Module system: ESM modules only
+
+7.  Testing
+
+   This repository is intended to be tested with Node.js v24.12.0.
+
+   To avoid changing your global Node installation, you can put a
+   portable Node distribution under:
+
+   o  tests/tools/node/win32-x64/node.exe (Windows)
+   o  tests/tools/node/linux-x64/bin/node (Linux)
+   o  tests/tools/node/darwin-arm64/bin/node (macOS Apple Silicon)
+   o  tests/tools/node/darwin-x64/bin/node (macOS Intel)
+
+   Then activate it for the current terminal session:
+
+   Windows (PowerShell / pwsh):
+
+      .\tests\scripts\use-node.ps1
+
+   macOS/Linux (bash/zsh):
+
+      . ./tests/scripts/use-node.sh
+
+   Run the test suite with:
+
+      npm test
+
+   The test suite includes unit tests, integration tests, and coverage
+   reporting with nyc (80% minimum coverage required).
+
+8.  Security Considerations
+
+   This library derives part of the identifier from machine and
+   environment specific inputs.  Implementers should consider the
+   privacy implications of generating stable identifiers and ensure the
+   identifier is not used as an authentication factor.
+
+9.  License
+
+   This software is dual-licensed:
+
+   o  AGPL-3.0-or-later: For open source and non-commercial use
+   o  Commercial License: Required for commercial use
+
+   See the LICENSE file for full license terms and conditions.
+
+   For commercial licensing inquiries, please contact:
+
+      richeve.bebedor+vs-scripts@gmail.com
+
+10.  Author
+
+   Richeve Bebedor 
+      <richeve.bebedor+vs-scripts@gmail.com>
+      (https://vs.github.io/scripts)
+
+11.  Version
+
+   Current version: 0.0.0

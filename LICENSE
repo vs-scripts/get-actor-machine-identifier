@@ -1,90 +1,125 @@
-==============================================================================
-                 DUAL LICENSING FOR GET-ACTOR-MACHINE-IDENTIFIER
 
-Copyright (c) 2025 Richeve Bebedor. All rights reserved.
+              Dual Licensing for get-actor-machine-identifier
 
-This software is dual-licensed under the following terms:
+Status of This Memo
 
-==============================================================================
-1. NON-COMMERCIAL USE (AGPL-3.0 with Additional Terms)
+   This memo describes the dual licensing terms for the software named
+   get-actor-machine-identifier.
 
-This program is free software: you can redistribute it and/or modify it under
-the terms of the GNU Affero General Public License as published by the Free
-Software Foundation, either version 3 of the License, or (at your option) any
-later version, with the following additional terms:
+Copyright Notice
 
-ADDITIONAL TERMS:
+   Copyright (c) 2025 Richeve Bebedor.  All rights reserved.
 
-a) Attribution: You must give appropriate credit, provide a link to the
-   license, and indicate if changes were made.
+1.  Overview
 
-b) Contribution Back: Any modifications must be contributed back to the
-   original project under the same license.
+   This software is dual-licensed under the following terms.
 
-c) Non-Commercial Use Only: This license does not permit use of the software
-   in any commercial product or service that generates revenue or is intended
-   to generate revenue. For commercial use, a separate commercial license is
-   required.
+2.  Non-Commercial Use (AGPL-3.0 with Additional Terms)
 
-This program is distributed in the hope that it will be useful, but WITHOUT
-ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
-details.
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU Affero General Public License as
+   published by the Free Software Foundation, either version 3 of the
+   License, or (at your option) any later version, with the following
+   additional terms:
 
-You should have received a copy of the GNU Affero General Public License
-along with this program. If not, see <https://www.gnu.org/licenses/>.
+   ADDITIONAL TERMS:
 
-==============================================================================
-2. COMMERCIAL LICENSE
+   a) Attribution: You must give appropriate credit, provide a link to
+      the license, and indicate if changes were made.
 
-For any commercial use (including but not limited to use in commercial
-products, SaaS applications, or any revenue-generating activities), you must
-obtain a commercial license from the copyright holder.
+   b) Contribution Back: Any modifications must be contributed back to
+      the original project under the same license.
 
-COMMERCIAL LICENSE TERMS:
+   c) Non-Commercial Use Only: This license does not permit use of the
+      software in any commercial product or service that generates
+      revenue or is intended to generate revenue. For commercial use, a
+      separate commercial license is required.
 
-1. GRANT OF LICENSE
-   Subject to the terms of this Agreement, Licensor grants Licensee a
-   non-exclusive, non-transferable, worldwide license to use the Software for
-   commercial purposes.
+   This program is distributed in the hope that it will be useful, but
+   WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+   Affero General Public License for more details.
 
-2. AUTHOR'S RIGHTS
-   The original author (Richeve Bebedor) retains all rights to use this
-   software for any purpose, including commercial use in their own projects
-   and applications without requiring an additional license.
+   You should have received a copy of the GNU Affero General Public
+   License along with this program. If not, see
+   <https://www.gnu.org/licenses/>.
 
-3. PROHIBITED ACTIONS
-   - Redistributing modified versions of this software without explicit
-     permission
-   - Using this software in commercial products without a commercial license
-   - Removing or altering the original copyright notices
-   - Redistributing the Software under open source licenses
-   - Using the Software in a way that competes with the Licensor's business
+3.  Commercial License
 
-4. PERMITTED USE
-   Licensee may:
-   - Use the Software in commercial applications
-   - Distribute the Software as part of commercial products or services
-   - Modify the Software for internal use within their organization
+   For any commercial use (including but not limited to use in
+   commercial products, SaaS applications, or any revenue-generating
+   activities), you must obtain a commercial license from the copyright
+   holder.
 
-5. NO WARRANTY
-   THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+   COMMERCIAL LICENSE TERMS:
 
-6. DONATION REQUIREMENT
-   Commercial users are encouraged to make a donation to support the ongoing
-   development and maintenance of this software. Donation details will be
-   provided upon commercial license inquiry.
+   1. GRANT OF LICENSE
 
-7. GOVERNING LAW
-   This Agreement shall be governed by and construed in accordance with the
-   laws of the Republic of the Philippines.
+      Subject to the terms of this Agreement, Licensor grants Licensee a
+      non-exclusive, non-transferable, worldwide license to use the
+      Software for commercial purposes.
 
-==============================================================================
-FOR COMMERCIAL LICENSING INQUIRIES OR TO DISCUSS CONTRIBUTION OPPORTUNITIES,
-PLEASE CONTACT: richeve.bebedor+vs-scripts@gmail.com
+   2. AUTHOR'S RIGHTS
 
-By using this software, you acknowledge that you have read, understood, and
-agree to be bound by the terms of the applicable license. If you do not agree
-to these terms, you must not use this software.
+      The original author (Richeve Bebedor) retains all rights to use
+      this software for any purpose, including commercial use in their
+      own projects and applications without requiring an additional
+      license.
+
+   3. PROHIBITED ACTIONS
+
+      - Redistributing modified versions of this software without
+        explicit permission
+
+      - Using this software in commercial products without a commercial
+        license
+
+      - Removing or altering the original copyright notices
+
+      - Redistributing the Software under open source licenses
+
+      - Using the Software in a way that competes with the Licensor's
+        business
+
+   4. PERMITTED USE
+
+      Licensee may:
+
+      - Use the Software in commercial applications
+
+      - Distribute the Software as part of commercial products or
+        services
+
+      - Modify the Software for internal use within their organization
+
+   5. NO WARRANTY
+
+      THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
+      EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+      MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+      NONINFRINGEMENT.
+
+   6. DONATION REQUIREMENT
+
+      Commercial users are encouraged to make a donation to support the
+      ongoing development and maintenance of this software. Donation
+      details will be provided upon commercial license inquiry.
+
+   7. GOVERNING LAW
+
+      This Agreement shall be governed by and construed in accordance
+      with the laws of the Republic of the Philippines.
+
+4.  Contact
+
+   For commercial licensing inquiries or to discuss contribution
+   opportunities, please contact:
+
+      richeve.bebedor+vs-scripts@gmail.com
+
+5.  Acceptance
+
+   By using this software, you acknowledge that you have read,
+   understood, and agree to be bound by the terms of the applicable
+   license. If you do not agree to these terms, you must not use this
+   software.

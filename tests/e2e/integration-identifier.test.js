@@ -1,10 +1,10 @@
 import test from 'tape';
-import { generateActorMachineIdentifier } from '../get-actor-machine-identifier.js';
-import { EXPECTED_RESULTS } from './fixtures.js';
+import { generateActorMachineIdentifier } from '../../get-actor-machine-identifier.js';
+import { EXPECTED_RESULTS } from '../lib/fixtures.js';
 
 // Mock the platform-specific functions
 const mockRequire = (await import('mock-require')).default;
-const { fsMock, childProcessMock, browserMocks } = await import('./mocks.js');
+const { fsMock, childProcessMock, browserMocks } = await import('../mocks.js');
 
 // Setup environment based on test context
 function setupEnvironment(platform) {

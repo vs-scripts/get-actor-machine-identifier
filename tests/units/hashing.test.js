@@ -1,6 +1,6 @@
 import test from 'tape';
-import { computeSHA256Hash, convertToBase36String, convertStringToBigIntViaHash } from '../get-actor-machine-identifier.js';
-import { TEST_STRINGS, EXPECTED_RESULTS } from './fixtures.js';
+import { computeSHA256Hash, convertToBase36String, convertStringToBigIntViaHash } from '../../get-actor-machine-identifier.js';
+import { TEST_STRINGS, EXPECTED_RESULTS } from '../lib/fixtures.js';
 
 // Test computeSHA256Hash
 test('computeSHA256Hash should produce correct hash for known inputs', async (t) => {
